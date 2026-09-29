@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('assets/images/background-desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 24px 24px;
+}
+
+main {
+    max-width: 500px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #c3c3e5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 2px;
+    display: block;
+
+}
+
+input {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #4a4a6a;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+button {
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f97362;
+    color: #150e2d;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+
+label[for="avatar"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 2px dashed #c3c4c3;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    background-color: #4a4456;
+    cursor: pointer;
+}
+
+.ticket-card {
+    background-color: #2d1f52;
+    background-image: url('assets/images/pattern-circle.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 280px;
+    border-radius: 16px;
+    padding: 32px 90px 32px 24px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+}
+
+#ticket-section {
+    display: none;
+}
+
+.ticket-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.ticket-card-header p {
+    font-size: 14px;
+    color: #c3c3e6;
+}
+
+.ticket-card-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ticket-card-user img {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.ticket-card-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ticket-message {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.ticket-message h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.ticket-message p {
+    font-size: 16px;
+    color: #c3c3e6;
+}
+
+.ticket-number {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-size: 12px;
+    color: #8a80b8;
+    letter-spacing: 2px;
+}
+
+.ticket-card::before,
+.ticket-card::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #0a0a1a;
+    border-radius: 50%;
+    right: 76px;
+}
+
+.ticket-card::before {
+    top: -16px;
+}
+
+.ticket-card::after {
+    bottom: -16px;
+}
+
+.ticket-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 60px;
+    border-left: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    /* tablet */
+}
+
+@media (max-width: 480px) {
+
+    /*celular*/
+    .hero h1,
+    .ticket-message h1 {
+        font-size: 24px;
+    }
+
+    .ticket-card-user h2 {
+        font-size: 18px;
+    }
+
+    .ticket-card {
+        padding: 24px 60px 24px 20px;
+    }
+
+    .ticket-number {
+        right: -6px;
+    }
+
+    .ticket-card::before .ticket-card::after {
+        right: 50px;
+    }
+
+    .ticket-divider {
+        right: 38px;
+    }
+}

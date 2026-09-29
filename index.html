@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Gerador de Tickets</title>
+</head>
+
+<body>
+  <header>
+    <img src="assets/images/logo-mark.svg" alt="logo Coding Conf">
+    <span>Coding Conf</span>
+  </header>
+  <main>
+    <section id="form-section">
+      <div class="hero">
+        <h1>Your Journey to Coding Conf 2026 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+      </div>
+      <form>
+        <label for="full-name">Full Name</label>
+        <input type="text" name="full-name" id="full-name">
+        <label for="email-address">Email Address</label>
+        <input type="email" placeholder="example@email.com" name="email-address" id="email-address">
+        <label for="github-username">GitHub Username</label>
+        <input type="text" placeholder="@yourusername" name="github-username" id="github-username">
+        <label for="avatar">
+          <img src="assets/images/icon-upload.svg" alt="">
+          <span>Drag and drop or click to upload</span>
+        </label>
+        <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg">
+        <small>Upload your photo (JPG or PNG, max size: 5MB).</small>
+        <button type="submit">Generate My Ticket</button>
+      </form>
+    </section>
+
+    <section id="ticket-section">
+      <div class="ticket-message">
+        <h1>Congrats, <span id="ticket-name-inline"></span>! Your ticket is ready.</h1>
+        <p>We've emailed your ticket to <span id="ticket-email-inline"></span> and will send updates...</p>
+      </div>
+      <div class="ticket-card">
+        <div class="ticket-card-header">
+          <div class="ticket-card-brand">
+            <img src="assets/images/logo-mark.svg" alt="Logo Coding Conf">
+            <span>Coding Conf</span>
+          </div>
+          <p>Jan 31, 2026 / Austin, TX</p>
+        </div>
+        <div class="ticket-card-user">
+          <img src="assets/images/image-avatar.jpg" alt="Sua foto" id="ticket-avatar">
+          <div>
+            <h2 id="ticket-name">Jonatan Kristof</h2>
+            <p id="ticket-username">@jonatankristof0101</p>
+          </div>
+        </div>
+        <p class="ticket-number" id="ticket-code">#01609</p>
+        <div class="ticket-divider">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
